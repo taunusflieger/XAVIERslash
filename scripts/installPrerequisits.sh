@@ -13,3 +13,9 @@ sudo apt update
 
 # Get ROS commands
 source /opt/ros/$ROS_DISTRO/setup.zsh
+
+# Install ZED camera sdk
+curl -L https://download.stereolabs.com/zedsdk/2.8/jetson_jp42 > /tmp/zedsdk.sh
+chmod +x /tmp/zedsdk.sh
+sudo /tmp/zedsdk.sh --quiet -- silent
+
