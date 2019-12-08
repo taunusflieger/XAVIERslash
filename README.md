@@ -29,5 +29,13 @@ Inspired by
 |Game Pad| tbd |   | Enables manual control of the car through the game pad  |
 
 
+## Software Installation
+It turns out that the latest Tegra NVIDIA L4T 32.2.3 with 4.9.140 Kernel configuration is missing support for the Logitech F710 Gamepad. The gamepad is required for the teleoperations of the car. To fix this we need to:
+1. Install the cross compile tool chain to be able to build the kernel on a x86 system (host). Another option would be to build the kernel directly on the Xavier, but than we need to transfer it back to the host system to be able to sign it with the SDK manager. Only signed kernel files can be executed on the Xavier. The NVidia recommended approach is to cross compile.
+2. Download the kernel sources. See details [here](https://docs.nvidia.com/jetson/archives/l4t-archived/l4t-322/index.html#page/Tegra%2520Linux%2520Driver%2520Package%2520Development%2520Guide%2Fkernel_custom.html%23wwpID0E0FD0HA)
+3. Save the current kernel configuration file. Use it as the basis for modification to include F710 support. Copy the config file to the host system
+4. Compile the kernel
+5. Sign the kernel binary
+6. Flash the Xavier with the new kernel binary
 
 
