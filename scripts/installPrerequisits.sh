@@ -1,5 +1,13 @@
 ##!/bin/zsh
 
+# Mount SSD with user home and data
+sudo grep -qF '/dev/nvme0n1p1' /etc/fstab || echo '/dev/nvme0n1p1       /mnt/home             ext4           defaults                                     00 ' >> /etc/fstab
+sudo mount -a
+
+# Install development tools
+sudo apt install -y build-essential clang cmake
+
+# Install ROS
 ROS_DISTRO=melodic
 
 echo "Installing ROS distro $ROS_DISTRO"
@@ -13,6 +21,9 @@ sudo apt update
 
 # Get ROS commands
 source /opt/ros/$ROS_DISTRO/setup.zsh
+
+
+# Install 
 
 # Install ZED camera sdk
 curl -L https://download.stereolabs.com/zedsdk/2.8/jetson_jp42 > /tmp/zedsdk.sh
