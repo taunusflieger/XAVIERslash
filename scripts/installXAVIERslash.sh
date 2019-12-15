@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/bash
 # Setup the github/mit-racecar/ ROS structure
 # Usage installXAVIERslash.sh <dirName>
 # dirName defaults to XAVIERslash-ws

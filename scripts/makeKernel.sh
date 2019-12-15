@@ -1,9 +1,9 @@
-#!/bin/zsh
+#!/bin/bash
 NUM_CPU=$(nproc)
-export TEGRA_KERNEL_OUT=~/Xavier-Kernel
-export LINUX_SRC=/usr/src/linux
-export CROSS_COMPILE=/usr/local/gcc-linaro-7.3.1-2018.05-i686_aarch64-linux-gnu/bin/aarch64-linux-gnu-
-export LOCALVERSION=-tegra
+TEGRA_KERNEL_OUT=~/Xavier-Kernel
+LINUX_SRC=/usr/src/linux
+CROSS_COMPILE=/usr/local/gcc-linaro-7.3.1-2018.05-i686_aarch64-linux-gnu/bin/aarch64-linux-gnu-
+LOCALVERSION=-tegra
 
 mkdir -p $TEGRA_KERNEL_OUT
 

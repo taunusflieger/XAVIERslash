@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/bash
 # Copy the RACECAR udev rules to /etc/udev/rules.d
 # The rules alias the Sparkfun 9DoF IMU as IMU and the 
 # Electronic Speed Controller as VESC

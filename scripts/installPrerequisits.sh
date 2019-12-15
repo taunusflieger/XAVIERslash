@@ -1,4 +1,4 @@
-##!/bin/zsh
+##!/bin/bash
 
 # Mount SSD with user home and data
 sudo grep -qF '/dev/nvme0n1p1' /etc/fstab || echo '/dev/nvme0n1p1       /mnt/home             ext4           defaults                                     00 ' >> /etc/fstab
