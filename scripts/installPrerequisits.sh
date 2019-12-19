@@ -1,32 +1,32 @@
 ##!/bin/bash
-
-# Mount SSD with user home and data
-sudo grep -qF '/dev/nvme0n1p1' /etc/fstab || echo '/dev/nvme0n1p1       /mnt/home             ext4           defaults                                     00 ' >> /etc/fstab
-sudo mount -a
+# scripts needs to run as sudo
 
 # Install development tools
-sudo apt install -y build-essential clang cmake
+apt install -y build-essential clang cmake apt-utils nano vim vim-runtime tmux screen git curl wget
 
 # Install ROS
 ROS_DISTRO=melodic
 
 echo "Installing ROS distro $ROS_DISTRO"
-sudo apt-get update
+apt-get update
 
-sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
-sudo apt-key adv --keyserver 'hkp://keyserver.ubuntu.com:80' --recv-key C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654
-sudo apt update
-sudo apt install -y nano vim vim-runtime tmux screen git curl wget ros-$ROS_DISTRO-desktop-full ros-$ROS_DISTRO-ackermann-msgs python-rosinstall python-rosinstall-generator python-wstool build-essential
-sudo apt update
+sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
+apt-key adv --keyserver 'hkp://keyserver.ubuntu.com:80' --recv-key C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654
+apt update
+apt install -y  ros-$ROS_DISTRO-desktop-full ros-$ROS_DISTRO-ackermann-msgs python-rosinstall python-rosinstall-generator python-wstool 
+apt update
 
 # Get ROS commands
-source /opt/ros/$ROS_DISTRO/setup.zsh
+source /opt/ros/$ROS_DISTRO/setup.bash
 
+# Install jetson-stats tool set
+pip install -U jetson-stats
 
 # Install 
+echo "Installing ZED SDK"
 
 # Install ZED camera sdk
 curl -L https://download.stereolabs.com/zedsdk/2.8/jetson_jp42 > /tmp/zedsdk.sh
 chmod +x /tmp/zedsdk.sh
-sudo /tmp/zedsdk.sh --quiet -- silent
+/tmp/zedsdk.sh --quiet -- silent
 
