@@ -58,5 +58,7 @@ TRAXXAS Servo Black -> VESC GND
 
 TRAXXAS Servo White -> VESC Servo
 
+## Firmware update on the VESC
 
+After updating the firmware on the VESC, the VESC ROS driver have created continuesly error messages complaining about an unknown payload_id. The reason for this is that later versions than the one the original VESC driver was written for, send COMM_ROTOR_POSITION update messages. The VESC driver has been updated to be able to handle these messages. Future updates to the VESC FW could introduce new messages, therefore the driver might require further update in the future to be compatible with the VESC FW.  
 
