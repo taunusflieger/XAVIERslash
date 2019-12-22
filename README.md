@@ -23,13 +23,12 @@ Inspired by
 | Compute System | [NVIDIA AGX Xavier](https://www.nvidia.com/de-de/autonomous-machines/jetson-store/) (729,00€) | [NVIDIA AGX Xavier](https://www.nvidia.com/de-de/autonomous-machines/embedded-systems/jetson-agx-xavier/) |  |
 | 500 GB SSD | [Samsung MZ-V7S500BW SSD 970 EVO Plus](https://www.amazon.de/dp/B07MFBLN7K/ref=pe_3044161_189395811_TE_SCE_dp_2) (107,60€) | [Samsung MZ-V7S500BW SSD 970 EVO Plus](https://www.samsung.com/de/memory-storage/970-evo-plus-nvme-m2-ssd/MZ-V7S500BW/) | Used for data recording |
 |BLDC Motor Controller| Trampa Boards VESC 6 Plus (£225,00) | [VESC 6 MkIII - newer model](http://www.trampaboards.com/vesc-6-mkiii--the-next-generation-benjamin-vedder-electronic-speed-controller-p-27517.html)  | 80A - 120A max  |
-|WiFi Card| tbd |   |   |
-|WiFi antenna| tbd |   |   |
+|WiFi Card| [Waveshare AC8265 Wireless NIC Applicable for Jetson Nano 2.4G / 5G WiFi Bluetooth 4.2 Dual Mode Module](https://www.amazon.de/gp/product/B07SGDRG34/ref=ppx_yo_dt_b_asin_title_o06_s00?ie=UTF8&psc=1) (25,99€) |  [Intel Dual Band Wireless-AC 6265](https://www.intel.com/content/dam/www/public/us/en/documents/product-briefs/dual-band-wireless-ac-8265-brief.pdf) | This contains an INTEL 8265AC M.2 WIFI and Bluetooth module together with two external antennas  |
 |IMU| tbd  |   |   |
-|USB Hub| tbd |   | Expands the USB ports on the XAVIER as more ports are required than available  |
-|Game Pad| tbd |   | Enables manual control of the car through the game pad  |
-|GC4010 bullet connectors| [GC4010](https://www.amazon.de/gp/product/B07VYSN74H/ref=ppx_yo_dt_b_asin_title_o02_s00?ie=UTF8&psc=1)  |   | Required to connect the TRAXXAS Venineon to the VESC   |
-
+|USB Hub| [ORICO - USB 3.0 Hub 12V](https://www.amazon.de/gp/product/B07B4TQTTW/ref=ppx_yo_dt_b_asin_title_o00_s00?ie=UTF8&psc=1) (24,99€)|   | Expands the USB ports on the XAVIER as more ports are required than available  |
+|Game Pad| [Logitech F710 PC Gamepad](https://www.amazon.de/gp/product/B07VYSN74H/ref=ppx_yo_dt_b_asin_title_o02_s00?ie=UTF8&psc=1) (39,49€) | [Logitech F710 PC Gamepad](https://www.logitechg.com/en-us/products/gamepads/f710-wireless-gamepad.html)  | Enables manual control of the car through the game pad  |
+|GC4010 bullet connectors| [GC4010](https://www.amazon.de/gp/product/B07VYSN74H/ref=ppx_yo_dt_b_asin_title_o02_s00?ie=UTF8&psc=1)  |   | Required to connect the TRAXXAS Venineon BLDC to the VESC   |
+|JST-PH JST Connector Kit| [JST-PH 2mm Pitch](https://www.amazon.de/gp/product/B01II33IYU/ref=ppx_yo_dt_b_asin_title_o01_s00?ie=UTF8&psc=1)  |   | Required to connect the TRAXXAS Servo to the VESC servo terminal  |
 
 
 ## Software Installation
@@ -49,5 +48,15 @@ A output -> White motor connector -> Black
 B output -> Yellow motor connector -> Yellow
 
 C output -> Blue motor connector -> Red
+
+## Connecting the VESC to the TRAXXAS Servo
+The VESC has a JST-PH terminal for connecting the servo. Again this connector is not compatible to the TRAXXAS connector of the servo. The association of the TRAXXAS servo cable colors to the VESC servo terminal is the following:
+
+TRAXXAS Servo Red -> VESC 5V
+
+TRAXXAS Servo Black -> VESC GND
+
+TRAXXAS Servo White -> VESC Servo
+
 
 
