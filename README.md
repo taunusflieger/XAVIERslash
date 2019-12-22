@@ -22,11 +22,14 @@ Inspired by
 |Lidar|  |   |  under consideration if rquired |
 | Compute System | [NVIDIA AGX Xavier](https://www.nvidia.com/de-de/autonomous-machines/jetson-store/) (729,00€) | [NVIDIA AGX Xavier](https://www.nvidia.com/de-de/autonomous-machines/embedded-systems/jetson-agx-xavier/) |  |
 | 500 GB SSD | [Samsung MZ-V7S500BW SSD 970 EVO Plus](https://www.amazon.de/dp/B07MFBLN7K/ref=pe_3044161_189395811_TE_SCE_dp_2) (107,60€) | [Samsung MZ-V7S500BW SSD 970 EVO Plus](https://www.samsung.com/de/memory-storage/970-evo-plus-nvme-m2-ssd/MZ-V7S500BW/) | Used for data recording |
+|BLDC Motor Controller| Trampa Boards VESC 6 Plus (£225,00) | [VESC 6 MkIII - newer model](http://www.trampaboards.com/vesc-6-mkiii--the-next-generation-benjamin-vedder-electronic-speed-controller-p-27517.html)  | 80A - 120A max  |
 |WiFi Card| tbd |   |   |
 |WiFi antenna| tbd |   |   |
 |IMU| tbd  |   |   |
 |USB Hub| tbd |   | Expands the USB ports on the XAVIER as more ports are required than available  |
 |Game Pad| tbd |   | Enables manual control of the car through the game pad  |
+|GC4010 bullet connectors| [GC4010](https://www.amazon.de/gp/product/B07VYSN74H/ref=ppx_yo_dt_b_asin_title_o02_s00?ie=UTF8&psc=1)  |   | Required to connect the TRAXXAS Venineon to the VESC   |
+
 
 
 ## Software Installation
@@ -37,5 +40,14 @@ It turns out that the latest Tegra NVIDIA L4T 32.2.3 with 4.9.140 Kernel configu
 4. Compile the kernel
 5. Sign the kernel binary
 6. Flash the Xavier with the new kernel binary
+
+## Connecting the VESC to the TRAXXAS Venineon BLDC
+The VESC has three connectors for the BLDC named A, B, C. The BLDC has initialy colored the three cables in white, yellow and blue. As the connector types of the BLC and the VESC don't match, we change the connectors of the BLDC to 4 mm male connectors (GC4010 bullet connectors). In this process we also use new colors for the connector cables to make make it easier in the future connecting the VESC to the BLDC.
+
+A output -> White motor connector -> Black
+
+B output -> Yellow motor connector -> Yellow
+
+C output -> Blue motor connector -> Red
 
 
