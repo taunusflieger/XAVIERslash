@@ -3,7 +3,7 @@
 
 # Install development tools
 apt update
-apt install -y build-essential clang cmake apt-utils nano vim vim-runtime tmux screen git curl wget
+apt install -y build-essential clang cmake apt-utils nano zsh vim vim-runtime tmux screen git curl wget
 
 # Install ROS
 ROS_DISTRO=melodic
@@ -47,3 +47,10 @@ apt remove --purge -y gnome-2048 aisleriot atomix gnome-chess five-or-more hitor
 apt clean
 apt autoremove -y
 
+echo "Installing oh-my-zsh"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+# jstest-gtk is added for testing the joystick
+echo "Installing joystick support"
+apt-get -y install \
+    jstest-gtk 

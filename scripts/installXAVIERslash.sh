@@ -1,11 +1,11 @@
-#!/bin/bash
+#!/bin/zsh
 # Setup the github/mit-racecar/ ROS structure
 # Usage installXAVIERslash.sh <dirName>
 # dirName defaults to XAVIERslash-ws
 # Fetches RACECAR ROS components, installs dependencies, and then catkin_make the workspace
 
 source /opt/ros/melodic/setup.zsh
-DEFAULTDIR=~/XAVIERslash-ws
+DEFAULTDIR=~/racecar-ws
 CLDIR="$1"
 if [ ! -z "$CLDIR" ]; then 
  DEFAULTDIR=~/"$CLDIR"
@@ -32,9 +32,6 @@ echo "Installing prerequisites"
 source devel/setup.zsh
 # Install the rosdeps -a = all -y = no questions -r = skip errors (for openCV in ZED_Wrapper)
 rosdep install -a -y -r
-# jstest-gtk is added for testing the joystick
-sudo apt-get -y install \
-    jstest-gtk 
 
 echo "Catkin Make"
 # On the Jetson, there's currently an issue with using the dynamic runtime
