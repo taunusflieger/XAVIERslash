@@ -1,0 +1,23 @@
+# Test Joystick
+jstest /dev/input/js0
+
+# Start VESC Driver Node
+roslaunch vesc_driver vesc_driver_node.launch 
+
+# List available ROS topics
+rostopic list
+
+# Test different RPM
+rostopic pub -r 20 /commands/motor/speed -- std_msgs/Float64 6000  
+
+# Start Teleoperation
+roslaunch racecar teleop.launch 
+
+# Record ros bag
+rosbag record /ackermann_cmd /zed/rgb/image_rect_color -O racecar.bag
+
+# install image view
+sudo apt install ros-melodic-image-view -y
+
+# Play the back with remapping
+rosbag play racecar.bag /ackermann_cmd:=/ackermann_cmd_mux/input/navigation /zed/rgb/image_rect_color:=/video_stuff

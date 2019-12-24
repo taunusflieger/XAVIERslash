@@ -21,7 +21,7 @@ sudo x11vnc -storepasswd /etc/x11vnc.pass
 
 #​ Step 3 - Create the Service Unit File
 #​ ​ #################################################################
-cat > /lib/systemd/system/x11vnc.service << EOF
+sudo cat > /lib/systemd/system/x11vnc.service << EOF
 [Unit]
 Description=Start x11vnc at startup.
 After=multi-user.target
