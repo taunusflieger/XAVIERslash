@@ -6,4 +6,4 @@ sudo cp ../data/99-racecar.rules /etc/udev/rules.d
 # Reread the rules; You may need to physically replug
 sudo udevadm control --reload-rules 
 sudo udevadm trigger
-echo 'RACECARX Rules installed'
+echo 'RACECAR Rules installed'
