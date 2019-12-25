@@ -1,4 +1,5 @@
 # Alias the Sparkfun 9DoF as imu, and the electronic speed controller as VESC
 KERNEL=="ttyACM[0-9]*", ACTION=="add", ATTRS{idVendor}=="15d1", MODE="0666", GROUP="dialout", SYMLINK+="sensors/hokuyo"
 KERNEL=="ttyACM[0-9]*", ACTION=="add", ATTRS{idVendor}=="0483", ATTRS{idProduct}=="5740", MODE="0666", GROUP="dialout", SYMLINK+="sensors/vesc"
+KERNEL=="ttyACM[0-9]*", ACTION=="add", ATTRS{idVendor}=="1b4f", ATTRS{idProduct}=="9d0f", MODE="0666", GROUP="dialout", SYMLINK+="sensors/imu"
 KERNEL=="js[0-9]*", ACTION=="add", ATTRS{idVendor}=="046d", ATTRS{idProduct}=="c21f", SYMLINK+="input/joypad-f710"
