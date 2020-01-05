@@ -1,6 +1,9 @@
 # Test Joystick
 jstest /dev/input/js0
 
+# Install ROS packages
+rosinstall . https://raw.githubusercontent.com/taunusflieger/XAVIERslash-ROS/master/racecar.rosinstall
+
 # Start VESC Driver Node
 roslaunch vesc_driver vesc_driver_node.launch 
 
