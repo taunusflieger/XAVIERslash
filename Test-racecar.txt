@@ -13,11 +13,18 @@ rostopic pub -r 20 /commands/motor/speed -- std_msgs/Float64 6000
 # Start Teleoperation
 roslaunch racecar teleop.launch 
 
+# Test ZED Wrapper
+roslaunch zed_wrapper zed.launch
+
 # Record ros bag
 rosbag record /ackermann_cmd /zed/rgb/image_rect_color -O racecar.bag
 
 # install image view
 sudo apt install ros-melodic-image-view -y
 
+# use ros image viewer
+rosrun image_view image_view image:=/video_stuff
+
 # Play the back with remapping
 rosbag play racecar.bag /ackermann_cmd:=/ackermann_cmd_mux/input/navigation /zed/rgb/image_rect_color:=/video_stuff
+
