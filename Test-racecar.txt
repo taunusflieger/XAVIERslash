@@ -19,6 +19,12 @@ roslaunch racecar teleop.launch
 # Test ZED Wrapper
 roslaunch zed_wrapper zed.launch
 
+# Test IMU
+roslaunch razor_imu_9dof razor-pub.launch
+rosrun tf static_transform_publisher 0 0 0 0 0 0 map base_imu_link 50
+rosrun tf static_transform_publisher 0 0 0 0 0 0 map base_link 50
+rosrun rviz rviz
+
 # Record ros bag
 rosbag record /ackermann_cmd /zed/rgb/image_rect_color -O racecar.bag
 
