@@ -13,8 +13,6 @@ Inspired by
 * [Racecar/J](https://racecarj.com/)
 
 
-
-
 ## USI RACECAR Components
 | Component | Where to buy | Specifications | Comments |
 | --------- | ------------ | -------------- | -------- |
