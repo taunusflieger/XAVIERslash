@@ -7,10 +7,6 @@ I've started this project to gain some practical experience with what I've learn
 Inspired by
 * [MIT racecar](https://mit-racecar.github.io/)
 * [Racecar/J](https://racecarj.com/)
-* [Racecar/X](https://github.com/MarkBroerkens/RACECARX)
-* [Jetson racecar](https://www.jetsonhacks.com/category/robotics/jetson-racecar/)
-* [EVASIVE MANEUVERS AND DRIFTING FOR AUTONOMOUS DRIVING](https://mrsdprojects.ri.cmu.edu/2016teamd/summary/)
-
 
 
 ## USI RACECAR Components
