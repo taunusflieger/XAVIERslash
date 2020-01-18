@@ -2,14 +2,16 @@
 
 Autonomous 1:10 RC robocar based on Traxxas Slash and controlled by NVIDIA AGX Xavier. 
 
+
+![](https://raw.githubusercontent.com/taunusflieger/XAVIERslash/master/media/racecar.jpg)
+
+
 I've started this project to gain some practical experience with what I've learned during the [Udacity Self Driving Car Engineer Nano Degree](https://www.udacity.com/course/self-driving-car-engineer-nanodegree--nd013)
 
 Inspired by
 * [MIT racecar](https://mit-racecar.github.io/)
 * [Racecar/J](https://racecarj.com/)
-* [Racecar/X](https://github.com/MarkBroerkens/RACECARX)
-* [Jetson racecar](https://www.jetsonhacks.com/category/robotics/jetson-racecar/)
-* [EVASIVE MANEUVERS AND DRIFTING FOR AUTONOMOUS DRIVING](https://mrsdprojects.ri.cmu.edu/2016teamd/summary/)
+
 
 
 
